@@ -64,17 +64,38 @@ public class IntVector {
      */
     public boolean add(int index, int value) {
         //SOLVE
+        testBounds(index);
+        int temp = arr[index];
+        arr[index] = value;
+        add(arr[size -1]); 
+        for(int i = index - 2; i > index;i--) {
+            arr[i + 1] = arr[i];
+        }
+        arr[index + 1] = temp;
+        if(arr[index] == value) {
+            return true;
+        }
+        return false;
     }
 
     /**
-     * Removes the first instance of 'value' find in the list
+     * Removes the first instance of 'value' found in the list
      * shifts remaining values left if necessary
      * returns 'true' if the value was removed from the list, 'false' otherwise
      * the list remains unchanged if the value does not exist in the list
      * @param value The value to be removed if it exists
      */
-    public boolean(int value) {
+    public boolean remove(int value) {
         // SOLVE
+        for(int i = 0; i < size; i++) {
+            if(arr[i] == value) {
+                for(int j = i; i < size - 1; i++) {
+                    arr[i] = arr[i +1];
+                }
+                return true;
+             }
+        }
+        return false;
     }
 
     @Override 
