@@ -98,6 +98,11 @@ public class IntVector {
         return false;
     }
 
+    public void set(int index, int value) {
+        testBounds(index);
+        arr[index] = value;
+    }
+
     @Override 
     public String toString() {
         if(size == 0) return "[]"; // empty array

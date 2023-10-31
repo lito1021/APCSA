@@ -6,14 +6,15 @@ public class Start {
     
             System.out.println("Size: " + test.size()); // Size: 0
     
-            for(int i = 0; i < test.size(); i++) {
-                test.add(i);
+            for(int i = 0; i < 20; i++) {
+                test.add(i*2);
             }
 
             System.out.println(test); // [0,19]
 
             //set first value to 50, shift everything right
-            test.add(0,50); // [50, 0, 1, 2, ...19]
+            test.add(0,50);
+            System.out.println(test); // [50, 0, 1, 2, ...19]
             
             //remove the first zero value found at index 1
             test.remove(0); // [50, 1, 2, ... 19]
