@@ -1,3 +1,4 @@
+package LinearStructures;
 public class IntVector {
 
     private final static int INITIAL_CAPACITY = 10;
