@@ -2,22 +2,24 @@ import LinearStructures.ArrayList;
 
 public class Start {
     public static void main(String[] args) {
-        ArrayList<String> arrStr = new ArrayList<String>();
-        ArrayList<Integer> arrInt = new ArrayList<Integer>();
+        ArrayList<String> strings = new ArrayList<String>();
+        ArrayList<Integer> nums = new ArrayList<Integer>();
 
-        arrStr.add("onamonapia");
-        arrStr.add("brr");
-        arrStr.add("pew");
+        strings.add("onamonapia");
+        strings.add("brr");
+        strings.add("pew");
 
-        arrInt.add(5);
-        arrInt.add(2000);
-        arrInt.add(467);
+        nums.add(5);
+        nums.add(2000);
+        nums.add(467);
 
-        System.out.println(arrStr);
-        System.out.println(arrInt);
+        System.out.println(strings);
+        System.out.println(nums);
 
-
-
+        
+        for(String s : strings) {
+            System.out.println(s);
+        }
 
 
 
