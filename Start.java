@@ -1,9 +1,13 @@
+
 import LinearStructures.ArrayList;
+import LinearStructures.LinkedList;
+
+import java.util.Iterator;
 
 public class Start {
     public static void main(String[] args) {
-        ArrayList<String> strings = new ArrayList<String>();
-        ArrayList<Integer> nums = new ArrayList<Integer>();
+        LinkedList<String> strings = new LinkedList<String>();
+        LinkedList<Integer> nums = new LinkedList<Integer>();
 
         strings.add("onamonapia");
         strings.add("brr");
@@ -17,12 +21,20 @@ public class Start {
         System.out.println(nums);
 
         
-        for(String s : strings) {
+        /*for(String s : strings) {
             System.out.println(s);
+        } */
+
+        LinkedList<String> pizza = new LinkedList<String>();
+        pizza.add("pepperoni");
+        pizza.add("cheese");
+        pizza.add("meat lovers");
+
+        Iterator<String> it = pizza.iterator();
+
+        //print the list 
+        while(it.hasNext()) {
+            System.out.println(it.next());
         }
-
-
-
-        System.out.println("HI");
     }
 }
