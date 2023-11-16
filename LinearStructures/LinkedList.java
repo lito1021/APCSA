@@ -136,7 +136,7 @@ public class LinkedList<E> implements Iterable<E> {
     //find a better answer to this question
     private static class Node<E> {
         E element; 
-        Node next;
+        Node<E> next;
 
         public Node(E element) {
             this.element = element;
